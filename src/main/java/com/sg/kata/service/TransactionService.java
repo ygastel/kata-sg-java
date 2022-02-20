@@ -49,7 +49,7 @@ public class TransactionService {
      * @param amount the amount to withdraw
      */
     private void validateWithdrawAmount(Double amount) {
-        Assert.isTrue(getBalance() - amount >= -overdraftAmount, MessageFormat.format("{}€ overdraft exceed, withdraw rejected.", overdraftAmount));
+        Assert.isTrue(getBalance() - amount >= -overdraftAmount, MessageFormat.format("{0}€ overdraft exceed, withdraw rejected.", overdraftAmount));
     }
 
     private Double getBalance() {
